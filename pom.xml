@@ -11,7 +11,7 @@
     <version>2.0.0</version>
   </parent>
   <description>ETHZ-01-03-01 Co-seismic deformation maps</description>
-  <version>0.2-SNAPSHOT</version>
+  <version>0.2</version>
   <properties>
     <summary>ETHZ-01-03-01 Co-seismic deformation maps</summary>
     <description>ETHZ-01-03-01 Co-seismic deformation maps</description>

@@ -59,11 +59,17 @@ intel-openmp=2018.0.0=hc7b2577_8
 ipaddress=1.0.18=py27_0
 ipykernel=4.5.2=py27_0
 <<<<<<< HEAD
+<<<<<<< HEAD
 ipyleaflet=0.9.0=py27_1
 ipython=5.8.0=py27_0
 ipython_genutils=0.1.0=py27_0
 ipywidgets=7.4.1=py27_0
 isort=4.2.15=py27hcfa4749_0
+=======
+ipython=5.1.0=py27_0
+ipython_genutils=0.1.0=py27_0
+ipywidgets=5.2.2=py27_1
+>>>>>>> parent of 065e1fa... update
 =======
 ipython=5.1.0=py27_0
 ipython_genutils=0.1.0=py27_0
@@ -103,13 +109,11 @@ nbformat=4.2.0=py27_0
 ncurses=5.9=10
 netcdf4=1.2.4=np113py27_0
 <<<<<<< HEAD
+<<<<<<< HEAD
 networkx=2.0=py27hfc23926_0
 nodejs=9.11.1=0
 notebook=5.4.1=py27_0
 numexpr=2.6.4=py27hd318778_0
-=======
-notebook=4.3.1=py27_0
->>>>>>> parent of 065e1fa... update
 numpy=1.13.3=py27hbcc08e0_0
 openjpeg=2.1.2=3
 openssl=1.0.2h=1
@@ -294,13 +298,6 @@ udunits2=2.2.25=hd30922c_1
 wcwidth=0.1.7=py27_0
 webencodings=0.5=py27_0
 wheel=0.29.0=py27_0
-<<<<<<< HEAD
-widgetsnbextension=3.4.1=py27_0
-wrapt=1.10.11=py27h04f6869_0
-xarray=0.10.8=py27_0
-=======
-widgetsnbextension=1.2.6=py27_0
->>>>>>> parent of 065e1fa... update
 xz=5.2.2=1
 yaml=0.1.6=0
 zeromq=4.1.5=0

@@ -10,11 +10,11 @@
     <artifactId>dcs-python-parent</artifactId>
     <version>2.0.0</version>
   </parent>
-  <description>ETHZ-01-03-01 Co-seismic deformation maps</description>
-  <version>0.2</version>
+  <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>
+  <version>0.1-SNAPSHOT</version>
   <properties>
-    <summary>ETHZ-01-03-01 Co-seismic deformation maps</summary>
-    <description>ETHZ-01-03-01 Co-seismic deformation maps</description>
+    <summary>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</summary>
+    <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>
     <community>ec-better</community>
     <yumRepo>ec-better</yumRepo>
   </properties>
@@ -60,16 +60,18 @@
         </plugins>
       </build>
     </profile>
+
     <profile>
       <id>package-app</id>
       <activation>
-        <property>
-          <name>env</name>
-          <value>ci</value>
-        </property>
+         <property>
+           <name>env</name>
+           <value>ci</value>
+         </property>
       </activation>
       <build>
         <plugins>
+
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
@@ -82,7 +84,7 @@
                   <goal>exec</goal>
                 </goals>
                 <configuration>
-                  <executable>/opt/anaconda/bin/app_descriptor_generator</executable>
+                  <executable>app_descriptor_generator</executable>
                   <arguments>
                     <argument>${basedir}/src/main/app-resources/application_template.xml</argument>
                     <argument>${basedir}/src/main/app-resources/application.xml</argument>
@@ -93,6 +95,8 @@
               </execution>
             </executions>
           </plugin>
+
+
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>rpm-maven-plugin</artifactId>
@@ -109,7 +113,7 @@
                     <require>miniconda</require>
                     <require>OTB</require>
                     <require>java-1.8.0-openjdk-devel</require>
-                    <require>snap6</require>
+                    <require>snap</require> 
                   </requires>
                   <postinstallScriptlet combine.self="override">
                     <script>conda update conda -y &amp;&amp; conda install -y --file /application/dependencies/python/packages.list &amp;&amp; cp /application/notebook/etc/snappy.ini /opt/anaconda/lib/python2.7/site-packages/snappy/snappy.ini</script>

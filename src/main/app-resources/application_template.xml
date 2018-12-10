@@ -6,7 +6,8 @@
       <defaultParameters></defaultParameters>
      <defaultJobconf>
         <property id="mapred.task.timeout">9900000000000</property>
-      </defaultJobconf>
+        <property id="ciop.job.max.tasks">1</property> 
+     </defaultJobconf>
     </jobTemplate>
   </jobTemplates>
   <workflow id="" title="" abstract="">

@@ -9,3 +9,5 @@ Untitled.ipynb
 TEST.ipynb
 application.xml
 *.tif
+S1*.xml
+*.properties

@@ -11,7 +11,7 @@
     <version>2.0.0</version>
   </parent>
   <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>
-  <version>0.4</version>
+  <version>0.5-SNAPSHOT</version>
   <properties>
     <summary>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</summary>
     <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>

@@ -11,7 +11,7 @@
     <version>2.0.0</version>
   </parent>
   <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.3</version>
   <properties>
     <summary>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</summary>
     <description>ETHZ-01-03-01 Co-seismic deformation maps and SAR Coherence changes</description>
@@ -60,18 +60,16 @@
         </plugins>
       </build>
     </profile>
-
     <profile>
       <id>package-app</id>
       <activation>
-         <property>
-           <name>env</name>
-           <value>ci</value>
-         </property>
+        <property>
+          <name>env</name>
+          <value>ci</value>
+        </property>
       </activation>
       <build>
         <plugins>
-
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
@@ -95,8 +93,6 @@
               </execution>
             </executions>
           </plugin>
-
-
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>rpm-maven-plugin</artifactId>
@@ -113,7 +109,7 @@
                     <require>miniconda</require>
                     <require>OTB</require>
                     <require>java-1.8.0-openjdk-devel</require>
-                    <require>snap</require> 
+                    <require>snap</require>
                   </requires>
                   <postinstallScriptlet combine.self="override">
                     <script>conda update conda -y &amp;&amp; conda install -y --file /application/dependencies/python/packages.list &amp;&amp; cp /application/notebook/etc/snappy.ini /opt/anaconda/lib/python2.7/site-packages/snappy/snappy.ini</script>

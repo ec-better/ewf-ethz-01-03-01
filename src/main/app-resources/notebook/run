@@ -158,9 +158,21 @@ def execute(nb_source, nb_target, kernel = 'python2'):
     
     try:
       out = ep.preprocess(nb, {'metadata': {'path': './'}})
-    except CellExecutionError:
+    except CellExecutionError as e:
       out = None
       ciop.log('ERROR', 'Error executing the notebook "%s".' % nb_source)
+      ciop.log('ERROR', 'Message: %s' % str(e))
+      ciop.log('ERROR', 'STDOUT content  ----------------')
+      with open(runtime + '/stdout.txt', 'rb') as file:
+	text = file.read()
+        ciop.log('ERROR', text)
+        file.close()
+      ciop.log('ERROR', 'STDERR content ----------------')
+      with open(runtime + '/stderr.txt', 'rb') as file:
+        text = file.read()
+        ciop.log('ERROR', text)
+        file.close()
+      ciop.log('ERROR', 'END ----------------')
 
       with io.open(nb_target, 'wb') as file:
         file.write(nbf.writes(nb))
@@ -241,3 +253,4 @@ except SystemExit as e:
   raise
 else:
   atexit.register(clean_exit, 0)
+
